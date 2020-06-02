@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    // Page init event
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+
+      if (page.matches('#first-page')) {
+
+        page.querySelector('#push-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page2.html');
+        };
+       
+        } else if (page.matches('#second-page')) {
+
+         page.querySelector('#push-button-1y').onclick = function() {
+           document.querySelector('#navigator').pushPage('page3.html');
+         };
+
+         page.querySelector('#push-button-1n').onclick = function() {
+           document.querySelector('#navigator').pushPage('page4.html');
+         };
+
+         } else if (page.matches('#third-page-1')) {
+
+         page.querySelector('#push-button-2y').onclick = function() {
+           document.querySelector('#navigator').pushPage('page5.html');
+         };
+
+         page.querySelector('#push-button-2n').onclick = function() {
+           document.querySelector('#navigator').pushPage('page6.html');
+         };
+        
+         } else if (page.matches('#third-page-2')) {
+
+        page.querySelector('#push-button-3y').onclick = function() {
+           document.querySelector('#navigator').pushPage('page6.html');
+         };
+
+        page.querySelector('#push-button-3n').onclick = function() {
+           document.querySelector('#navigator').pushPage('page7.html');
+         };
+
+        } else if (page.matches('#fourth-page-1')) {
+
+        page.querySelector('#push-button-4y').onclick = function() {
+           document.querySelector('#navigator').pushPage('page8.html');
+         };
+
+        page.querySelector('#push-button-4n').onclick = function() {
+           document.querySelector('#navigator').pushPage('page9.html');
+         };
+       
+         } else if (page.matches('#fourth-page-2')) {
+
+        page.querySelector('#push-button-5y').onclick = function() {
+           document.querySelector('#navigator').pushPage('page9.html');
+         };
+
+        page.querySelector('#push-button-5n').onclick = function() {
+           document.querySelector('#navigator').pushPage('page10.html');
+         };
+
+        } else if (page.matches('#fourth-page-3')) {
+
+         page.querySelector('#push-button-6n').onclick = function() {
+            document.querySelector('#navigator').pushPage('page10.html');
+          };
+
+         page.querySelector('#push-button-6y').onclick = function() {
+            document.querySelector('#navigator').pushPage('page11.html');
+          };
+     
+        } else if (page.matches('#fifth-page-1')) {
+
+         page.querySelector('#push-button-7y').onclick = function() {
+            document.querySelector('#navigator').pushPage('page13.html');
+          };
+
+         page.querySelector('#push-button-7n').onclick = function() {
+            document.querySelector('#navigator').pushPage('page12.html');
+          };
+     
+       } else if (page.matches('#fifth-page-2')) {
+
+          page.querySelector('#push-button-8y').onclick = function() {
+             document.querySelector('#navigator').pushPage('page12.html');
+           };
+
+          page.querySelector('#push-button-8n').onclick = function() {
+             document.querySelector('#navigator').pushPage('page13.html');
+           };
+
+       } else if (page.matches('#fifth-page-3')) {
+
+          page.querySelector('#push-button-9y').onclick = function() {
+             document.querySelector('#navigator').pushPage('page14.html');
+           };
+
+          page.querySelector('#push-button-9n').onclick = function() {
+             document.querySelector('#navigator').pushPage('page15.html');
+           };
+
+      } else if (page.matches('#fifth-page-4')) {
+
+          page.querySelector('#push-button-10y').onclick = function() {
+             document.querySelector('#navigator').pushPage('page14.html');
+           };
+
+          page.querySelector('#push-button-10n').onclick = function() {
+             document.querySelector('#navigator').pushPage('page15.html');
+           };
+
+
+      }
+    });
+
+    if (ons.platform.isIPhoneX()) {
+      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+  </script>
+</head>
+<body>
+  <ons-navigator id="navigator" page="page1.html"></ons-navigator>
+
+  <ons-template id="page1.html">
+    <ons-page id="first-page">
+      <ons-toolbar>
+        <div class="center">Page 1</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>パーソナルカラー診断</p>
+        <ons-button modifier="outline" id="push-button">診断スタート</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page2.html">
+    <ons-page id="second-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 1</ons-back-button></div>
+        <div class="center">Page 2</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>肌の色はどちらかといえば色白</p>
+        <ons-button id="push-button-1y">Yes</ons-button>
+        <ons-button id="push-button-1n">No</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page3.html">
+    <ons-page id="third-page-1">
+      <ons-toolbar>
+        <div class="center">Page 3</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>髪色が黒めの茶色、もしくは黒に近い</p>
+        <ons-button id="push-button-2y">Yes</ons-button>
+        <ons-button id="push-button-2n">No</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+<ons-template id="page4.html">
+    <ons-page id="third-page-2">
+      <ons-toolbar>
+        <div class="center">Page 3</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>髪色が黒めの茶色、もしくは黒に近い</p>
+        <ons-button id="push-button-3y">Yes</ons-button>
+        <ons-button id="push-button-3n">No</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+<ons-template id="page5.html">
+    <ons-page id="fourth-page-1">
+      <ons-toolbar>
+        <div class="center">Page 4</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>顔色が良くないと言われることが多い</p>
+        <ons-button id="push-button-4y">Yes</ons-button>
+        <ons-button id="push-button-4n">No</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+ <ons-template id="page6.html">
+    <ons-page id="fourth-page-2">
+      <ons-toolbar>
+        <div class="center">Page 4</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>日焼けしやすい</p>
+        <ons-button id="push-button-5y">Yes</ons-button>
+        <ons-button id="push-button-5n">No</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+    
+  <ons-template id="page7.html">
+    <ons-page id="fourth-page-3">
+      <ons-toolbar>
+        <div class="center">Page 4</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>ほおに赤みが出やすい</p>
+        <ons-button id="push-button-6y">Yes</ons-button>
+        <ons-button id="push-button-6n">No</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+
+  <ons-template id="page8.html">
+    <ons-page id="fifth-page-1">
+      <ons-toolbar>
+        <div class="center">Page 5</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>はっきりとしたコントラストのある色が似合う</p>
+        <ons-button id="push-button-7y">Yes</ons-button>
+        <ons-button id="push-button-7n">No</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page9.html">
+    <ons-page id="fifth-page-2">
+      <ons-toolbar>
+        <div class="center">Page 5</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>ブラウン、カーキ、ゴールドなどスモーキーカラーが似合う</p>
+        <ons-button id="push-button-8y">Yes</ons-button>
+        <ons-button id="push-button-8n">No</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+   
+  <ons-template id="page10.html">
+    <ons-page id="fifth-page-3">
+      <ons-toolbar>
+        <div class="center">Page 5</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>黒、ネイビー、グレーなどの無彩色が似合う</p>
+        <ons-button id="push-button-9y">Yes</ons-button>
+        <ons-button id="push-button-9n">No</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page11.html">
+    <ons-page id="fifth-page-4">
+      <ons-toolbar>
+        <div class="center">Page 5</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>穏やかな色やパステルが似合う</p>
+        <ons-button id="push-button-10y">Yes</ons-button>
+        <ons-button id="push-button-10n">No</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+<ons-template id="page12.html">
+    <ons-page id="sixth-page-1">
+      <ons-toolbar>
+        <div class="center">Page 6</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>あなたはイエベ秋タイプです。
+
+          似合うメイクは大人っぽいメイク。
+          カラーはブラウン全般、深みのあるオレンジ、ゴールドやベージュなどの落ち着いた色です。
+        </p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+<ons-template id="page13.html">
+    <ons-page id="sixth-page-2">
+      <ons-toolbar>
+        <div class="center">Page 6</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>あなたはブルべ冬タイプです。
+
+          似合うメイクはグレーなど無彩色を使ったメイクや、アイラインとリップをポイントにしたメイク、目元を強調したメイクなど、メリハリのあるメイク。
+          カラーはレッド、シルバーなど、インパクトのある色です。
+        </p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+<ons-template id="page14.html">
+    <ons-page id="sixth-page-3">
+      <ons-toolbar>
+        <div class="center">Page 6</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>あなたはブルべ夏タイプです。
+
+          似合うメイクはコントラストが強くなりすぎないよう、穏やかなトーンでまとめるメイク。下地にラベンダー系を使用すると、肌の透明感がより引き出される。
+          カラーはラベンダー、グレイッシュブルー、スモーキーピンクなど、クールなパステル系です。
+        </p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page15.html">
+    <ons-page id="sixth-page-4">
+      <ons-toolbar>
+        <div class="center">Page 6</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>あなたはイエベ春タイプです。
+
+          似合うメイクは明るく健康的なイメージを活かした、ナチュラルでキュートなメイク。本来持っているツヤを活かした光沢のある肌づくりがおすすめ。
+          カラーはコーラルピンク、オレンジ、グリーンなど、クリアではっきりした色です。
+        </p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+</body>
+</html>
+
+
+
+
+
